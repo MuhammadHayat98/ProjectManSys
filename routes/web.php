@@ -17,3 +17,21 @@ Route::get('/', function () {
 Route::get('/home', function(){
     return view ('home');
 });
+Route::get('/deliverable', function(){
+    return view ('deliverable');
+});
+Route::get('/login', function(){
+    return view ('login');
+});
+Route::get('/task', function(){
+    return view ('task');
+});
+Route::get('/actionItem', function(){
+    return view ('actionItem');
+});
+Route::get('/resources', function(){
+    return view ('resources');
+});
+Route::get('/issue', function(){
+    return view ('issue');
+});
