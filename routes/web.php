@@ -20,4 +20,6 @@ Route::get('/home', function(){
 Route::get('/deliverable', function(){
     return view ('deliverable');
 });
-
+Route::get('/login', function(){
+    return view ('login');
+});
