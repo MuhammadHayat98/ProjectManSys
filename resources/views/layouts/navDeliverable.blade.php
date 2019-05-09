@@ -9,6 +9,21 @@
             body {
                 padding-top: 100px;
             }
+            .row{
+                padding: 10px 20px;
+            }
+            .col-one{
+                float:right;
+                border-spacing: 20px;
+            }
+            .main-form{
+                width: 40%;
+                margin:auto;
+            }
+            .button-custom{
+                float: right;
+                margin: 10%;
+            }
     </style>
     <title>Deliverables</title>
 </head>
@@ -42,7 +57,7 @@
                         </a>
                     </li>
                     <li class="nav-item active">
-                        <a class="btn btn-outline-danger my-2 my-sm-0" href="../php/logout.php">Logout</a>
+                        <a class="btn btn-outline-danger my-2 my-sm-0" href="/login">Logout</a>
                     </li>
                 </ul>
             </div>
