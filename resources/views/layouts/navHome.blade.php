@@ -24,8 +24,19 @@
                 float: right;
                 margin: 10%;
             }
+            .jumbotron{
+                width:auto;
+                height: 90%;
+                margin: 1% 5% 5% 5%;
+            }
+            /* .list-group{
+                width:30%;
+                height:auto;
+                margin:
+            } */
+            
     </style>
-    <title>Deliverables</title>
+    <title>Home</title>
 </head>
 <body>
 <header>
@@ -39,18 +50,8 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/deliverable">Create Deliverable
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="deliverableUpdate">Update Deliverable
-                        </a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav">
+               
+                <ul class="navbar-nav   ">
                     <li class="nav-item active">
                         <a class="nav-link">Welcome,User
                             
