@@ -38,7 +38,27 @@ Route::get('/issue', function(){
 Route::get('/decision', function(){
     return view ('decision');
 });
+//updated pages
+Route::get('/updateTask', function(){
+    return view ('task');
+});
+Route::get('/updateActionItem', function(){
+    return view ('actionItem');
+});
+Route::get('/updateResource', function(){
+    return view ('resources');
+});
+Route::get('/updateIssue', function(){
+    return view ('issue');
+});
+Route::get('/updateDecision', function(){
+    return view ('decision');
+});
+
 // $router->group('/deliverable',function () use ($router) {
 //     $router->get('/deliverable', ['uses' => 'Deliverables@createDeliverable']);
 // });
 Route::get('/deliverable', 'Deliverables@show');
+Route::get('/updateDeliverable', function(){
+         return view ('deliverable');
+});
