@@ -26,14 +26,17 @@
             }
             .jumbotron{
                 width:auto;
-                height: 90%;
+                height: 95%;
                 margin: 1% 5% 5% 5%;
+                overflow: auto;
             }
-            /* .list-group{
-                width:30%;
-                height:auto;
-                margin:
-            } */
+            .list-group{
+                height:300px;
+                overflow-wrap: normal;
+            }
+            .container-fluid{
+                
+            }
             
     </style>
     <title>Home</title>
@@ -50,7 +53,35 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
-               
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/task">Tasks
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="deliverable">Deliverable
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/issue">Issue
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="actionItem">Action Item
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/resources">Resources
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="decision">Decision
+                        </a>
+                    </li>
+                </ul>
                 <ul class="navbar-nav   ">
                     <li class="nav-item active">
                         <a class="nav-link">Welcome,User

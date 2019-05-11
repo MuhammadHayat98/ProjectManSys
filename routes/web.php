@@ -17,9 +17,9 @@ Route::get('/', function () {
 Route::get('/home', function(){
     return view ('home');
 });
-Route::get('/deliverable', function(){
-    return view ('deliverable');
-});
+// Route::get('/deliverable', function(){
+//     return view ('deliverable');
+// });
 Route::get('/login', function(){
     return view ('login');
 });
@@ -35,3 +35,10 @@ Route::get('/resources', function(){
 Route::get('/issue', function(){
     return view ('issue');
 });
+Route::get('/decision', function(){
+    return view ('decision');
+});
+// $router->group('/deliverable',function () use ($router) {
+//     $router->get('/deliverable', ['uses' => 'Deliverables@createDeliverable']);
+// });
+Route::get('/deliverable', 'Deliverables@show');
