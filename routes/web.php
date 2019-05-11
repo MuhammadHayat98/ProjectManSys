@@ -40,19 +40,19 @@ Route::get('/decision', function(){
 });
 //updated pages
 Route::get('/updateTask', function(){
-    return view ('task');
+    return view ('updateTask');
 });
 Route::get('/updateActionItem', function(){
-    return view ('actionItem');
+    return view ('updateActionItem');
 });
 Route::get('/updateResource', function(){
-    return view ('resources');
+    return view ('updateResources');
 });
 Route::get('/updateIssue', function(){
-    return view ('issue');
+    return view ('updateIssue');
 });
 Route::get('/updateDecision', function(){
-    return view ('decision');
+    return view ('updateDecision');
 });
 
 // $router->group('/deliverable',function () use ($router) {
