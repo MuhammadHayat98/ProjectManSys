@@ -17,9 +17,9 @@ Route::get('/', function () {
 Route::get('/home', function(){
     return view ('home');
 });
-// Route::get('/deliverable', function(){
-//     return view ('deliverable');
-// });
+Route::get('/deliverable', function(){
+    return view ('deliverable');
+});
 Route::get('/login', function(){
     return view ('login');
 });
@@ -29,7 +29,7 @@ Route::get('/task', function(){
 Route::get('/actionItem', function(){
     return view ('actionItem');
 });
-Route::get('/resources', function(){
+Route::get('/resource', function(){
     return view ('resources');
 });
 Route::get('/issue', function(){
@@ -58,7 +58,6 @@ Route::get('/updateDecision', function(){
 // $router->group('/deliverable',function () use ($router) {
 //     $router->get('/deliverable', ['uses' => 'Deliverables@createDeliverable']);
 // });
-Route::get('/deliverable', 'Deliverables@show');
 Route::get('/updateDeliverable', function(){
          return view ('deliverable');
 });
