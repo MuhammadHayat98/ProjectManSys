@@ -1,6 +1,6 @@
-@extends('layouts.navDeliverable')
+@extends('layouts.navRequirement')
 <div class="container-fluid">
-<form method="POST" action="{{route('deliverable.store')}}" class="main-form">
+<form method="POST" action="" class="main-form">
        {{csrf_field()}}
        <div class="row">
            <div class="col">
@@ -19,8 +19,8 @@
       
        <div class="row">
            <div class="col">
-                <label for="Description">Description</label>
-                <textarea class="form-control shadow-sm p-3 mb-5 bg-white rounded pre-scrollable" name="Description" id="Description" cols="10" rows="10" placeholder="Description of deliverable"></textarea>
+                <label for="Description">Requirement Text</label>
+                <textarea class="form-control shadow-sm p-3 mb-5 bg-white rounded pre-scrollable" name="requirement_text" id="Description" cols="10" rows="10" placeholder="Description of deliverable"></textarea>
            </div>
        </div>
        {{-- <div class="row">
@@ -36,9 +36,14 @@
         </div> --}}
        <div class="row">
            <div class="col">
-               <label for="dueDate">Due Date</label>
-               <input type="date" name="dueDate" id="dueDate" class="form-control form-control-md shadow-sm p-3 mb-5 bg-white rounded ">
+               <label for="dueDate">Source document</label>
+               <input type="text" name="source_doc" id="source_doc" class="form-control form-control-md shadow-sm p-3 mb-5 bg-white rounded ">
            </div>
+           <div class="row">
+                <div class="col">
+                    <label for="dueDate">Deliverable</label>
+                    <input type="text" name="deliverable_id" id="deliverable_id" class="form-control form-control-md shadow-sm p-3 mb-5 bg-white rounded ">
+                </div>
            <div class="col ">
                <div class="button-custom">
                     <button type="submit" class="btn btn-primary">Submit Deliverable</button>

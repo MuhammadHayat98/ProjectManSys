@@ -1,4 +1,7 @@
 <?php
+use Illuminate\Support\Facades\Route;
+use App\Deliverable;
+use App\Task;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,17 +18,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/home', function(){
-    return view ('home');
+    $deliverables = Deliverable::orderBy('created_at')->get();
+    $tasks = Task::orderBy('created_at')->get();
+    return view ('home', ['deliverables' => $deliverables, 'tasks' => $tasks]);
 });
-Route::get('/deliverable', function(){
-    return view ('deliverable');
-});
+Route::get('deliverable', 'DeliverableController@create')->name('deliverable.create');
+Route::post('deliverable', 'DeliverableController@store')->name('deliverable.store');
+Route::get('task', 'TaskController@create')->name('task.create');
+Route::post('task', 'TaskController@store')->name('task.store');
 Route::get('/login', function(){
     return view ('login');
 });
-Route::get('/task', function(){
-    return view ('task');
-});
+
+
 Route::get('/actionItem', function(){
     return view ('actionItem');
 });

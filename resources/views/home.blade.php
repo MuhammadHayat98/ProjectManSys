@@ -129,15 +129,25 @@
             <div class="col-md-3 col-sm-6 offset-1">
                 <label for="Deliverable">Deliverables:</label>
                 <div class="list-group pre-scrollable">
+                    @if (count($deliverables) > 0)
+                        @foreach ($deliverables as $deliverable)
+                        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+                                <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">Deliverable ID: {{$deliverable->id}}</h6>
+                                <small>Name: {{$deliverable->name}}</small>
+                                </div>
+                            <p class="mb-1">{{$deliverable->description}}</p>
+                                <small>{{$deliverable->due_date}}</small>
+                            </a>
+                        @endforeach
+                    @else
                     <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-                        <div class="d-flex w-100 justify-content-between">
-                        <h6 class="mb-1">Deliverable ID: D0001</h6>
-                        <small>3 days ago</small>
-                        </div>
-                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                        <small>Donec id elit non mi porta.</small>
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-between">
+                            <h6 class="mb-1">No Deliverables</h6>
+                            
+                        </a>
+                    @endif
+                    {{-- <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
                         <div class="d-flex w-100 justify-content-between">
                         <h6 class="mb-1">Deliverable ID: D0002</h6>
                         <small class="text-muted">3 days ago</small>
@@ -184,7 +194,7 @@
                         </div>
                         <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
                         <small class="text-muted">Donec id elit non mi porta.</small>
-                    </a>
+                    </a> --}}
                 </div>
             </div>
         </div> {{--End of row --}}

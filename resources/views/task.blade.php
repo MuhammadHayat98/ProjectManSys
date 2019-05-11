@@ -1,6 +1,7 @@
 @extends('layouts.navTask')
 <div class="container-fluid">
-    <form action="" class="main-form">
+    <form action="POST" action="{{route('task.store')}}"  class="main-form">
+        {{csrf_field()}}
         <div class="row">
             <div class="col">
                 <div class="form-group small">
@@ -48,13 +49,13 @@
             <div class="col">
                 <div class="form-group small">
                     <label for="endDate">Expected End Date</label>
-                    <input type="month" name="endDate" id="endDate" class="form-control shadow-sm p-3 mb-5 bg-white rounded">
+                    <input type="date" name="endDate" id="endDate" class="form-control shadow-sm p-3 mb-5 bg-white rounded">
                 </div>
             </div>
             <div class="col">
                 <div class="form-group small">
                     <label for="duration">Expected Duration</label>
-                    <input type="month" name="duration" id="duration" class="form-control shadow-sm p-3 mb-5 bg-white rounded">
+                    <input type="date" name="duration" id="duration" class="form-control shadow-sm p-3 mb-5 bg-white rounded">
                 </div>
             </div>
         </div>
@@ -81,13 +82,13 @@
             <div class="col">
                 <div class="form-group small">
                     <label for="actualStart">Actuall Start Date</label>
-                    <input type="month" name="ActualStart" id="ActualStart" class="form-control shadow-sm p-3 mb-5 bg-white rounded">
+                    <input type="date" name="ActualStart" id="ActualStart" class="form-control shadow-sm p-3 mb-5 bg-white rounded">
                 </div>
             </div>
             <div class="col">
                 <div class="form-group small">
                     <label for="ActualEndDate">Actuall End Date</label>
-                    <input type="month" name="duration" id="ActualEndDate" class="form-control shadow-sm p-3 mb-5 bg-white rounded">
+                    <input type="date" name="duration" id="ActualEndDate" class="form-control shadow-sm p-3 mb-5 bg-white rounded">
                 </div>
             </div>
         </div>
@@ -133,7 +134,7 @@
             <div class="col">
                 <div class="form-group small ">
                     <label for="Aduration">Actual Duration</label>
-                    <input type="month" name="Aduration" id="Aduration" class="form-control shadow-sm p-3 mb-5 bg-white rounded">
+                    <input type="date" name="Aduration" id="Aduration" class="form-control shadow-sm p-3 mb-5 bg-white rounded">
                 </div>
             </div>
         </div>
@@ -159,17 +160,16 @@
             </div>
             <div class="col">
                     <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" style=" margin:20px 20px 20px 20px;" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Successor Task
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                            <button class="dropdown-item" type="button">Task one</button>
-                            <button class="dropdown-item" type="button">Task Two</button>
-                            <button class="dropdown-item" type="button">Task three</button>
-                            <button class="dropdown-item" type="button">Task four</button>
-                            <button class="dropdown-item" type="button">Task five</button>
-                            <button class="dropdown-item" type="button">Task six</button>
-                        </div>
+                        <select class="form-control" name='deliverable_id'>
+                            @if (count($deliverables) > 0)
+                                @foreach ($deliverables as $deliverable)
+                                    <option value= {{$deliverable->id}}>{{$deliverable->name}}</option>
+                                @endforeach
+                            @else
+                            <option value=0>no deliverables</option>
+                            @endif
+                            
+                        </select>
                     </div>
                 </div>
         </div>
@@ -179,10 +179,11 @@
         <div class="row">
                 <div class="col ">
                     <div class="button-custom">
-                        <button type="submit" class="btn btn-primary">Submit Deliverable</button>
+                        
                     </div>
                 </div>
             </div>
+            <button type="submit" class="btn btn-primary">Submit Task</button>
     </form>
     <br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br>
 </div>
