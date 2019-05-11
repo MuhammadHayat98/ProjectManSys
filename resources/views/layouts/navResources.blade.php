@@ -46,7 +46,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/resource">Create Resource
+                        <a class="nav-link" href="/resources">Create Resource
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
