@@ -17,7 +17,7 @@
                 border-spacing: 20px;
             }
             .main-form{
-                width: 40%;
+                width: 50%;
                 margin:auto;
             }
             .button-custom{
@@ -46,7 +46,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="deliverableUpdate">Update Deliverable
+                        <a class="nav-link" href="updateDeliverable">Update Deliverable
                         </a>
                     </li>
                 </ul>
