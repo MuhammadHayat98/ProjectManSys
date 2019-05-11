@@ -73,7 +73,7 @@
                         </a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="/resources">Resources
+                        <a class="nav-link" href="/resource">Resources
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>

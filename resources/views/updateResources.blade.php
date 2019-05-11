@@ -34,7 +34,13 @@
                             <textarea class="form-control shadow-sm p-3 mb-5 bg-white rounded pre-scrollable" id="skills" cols="10" rows="10" placeholder="Enter skills seperated by commas"></textarea>                        </div>
                 </div>
         </div>
-        
+        <div class="row">
+                <div class="col ">
+                        <div class="button-custom">
+                             <button type="submit" class="btn btn-primary">Submit Deliverable</button>
+                        </div>
+                    </div>
+        </div>
     </form>
 </div>
 @section('content')
